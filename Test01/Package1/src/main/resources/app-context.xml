@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd"
+       default-lazy-init="true">
+
+<!--    <context:component-scan base-package="com.sandbox_gradle.test_01_01"/>-->
+<!--    -->
+<!--    <bean id="injectSimple" name="wiseworm" class="com.honchar.springDemo.chapter03.xml.InjectSimple"-->
+<!--          p:name="John Mayer"-->
+<!--          p:age="39"-->
+<!--          p:height="1.92"-->
+<!--          p:programmer="false"-->
+<!--          p:ageInSeconds="1241401112"-->
+<!--          p:messageProvider-ref="provider"-->
+<!--          c:aboba="ganging up!"-->
+<!--            constructor-arg value="I hope that someone gets mу message in а bottle"-->
+<!--          init-method="init"-->
+<!--          destroy-method="destroy"/>-->
+
+<!--    <util:list id="basenames">-->
+<!--        <value>buttons</value>-->
+<!--        <value>labels</value>-->
+<!--    </util:list>-->
+
+<!--    <bean name="customEditorConfigurer"-->
+<!--          class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+<!--        <property name="customEditors">-->
+<!--            <map>-->
+<!--                <entry key="com.honchar.springDemo.chapter04.propertyEditor.FullName"-->
+<!--                       value="com.honchar.springDemo.chapter04.propertyEditor.NamePropertyEditor"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="builtInSample" class="com.honchar.springDemo.chapter04.propertyEditor.PropertyEditorBean"-->
+<!--          p:character="A"-->
+<!--          p:bytes="John Mayer"-->
+<!--          p:cls="java.lang.String"-->
+<!--          p:trueOrFalse="true"-->
+<!--          p:stringList-ref="stringList"-->
+<!--          p:stream="test.txt"-->
+<!--          p:floatValue="123.45678"-->
+<!--          p:date="05/03/13"-->
+<!--          p:file="#{systemProperties['java.io.tmpdir']}#{systemProperties['file.separator']}test.txt"-->
+<!--          p:locale="en_US"-->
+<!--          p:pattern="a*b"-->
+<!--          p:properties="name=Chris age=32"-->
+<!--          p:trimString="   String need trimming   "-->
+<!--          p:url="https://spring.io/"-->
+<!--    />-->
+</beans>
