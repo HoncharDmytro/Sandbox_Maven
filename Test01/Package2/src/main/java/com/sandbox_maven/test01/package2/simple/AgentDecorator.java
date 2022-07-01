@@ -5,8 +5,8 @@ import org.aopalliance.intercept.MethodInvocation;
 
 public class AgentDecorator implements MethodInterceptor {//MethodInterceptor
     public Object invoke(MethodInvocation invocation) throws Throwable {//MethodInvocation
-        System.out.print("James ");
-        Object retVal = invocation.proceed();//proceed()
+        System.out.print(", James ");
+        Object retVal = invocation.proceed();//proceed() - call interception target method
         System.out.println("!");
         return retVal;
     }

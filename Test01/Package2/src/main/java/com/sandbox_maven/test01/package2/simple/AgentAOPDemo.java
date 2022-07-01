@@ -13,7 +13,6 @@ public class AgentAOPDemo {
         Agent proxy = (Agent) pf.getProxy();//receive proxy
 
         target.speak();//original call
-        System.out.println("\n------------------------------------------------");
         proxy.speak();//proxy call
     }
 }

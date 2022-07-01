@@ -19,7 +19,7 @@
     <!--        </encoder>-->
     <!--    </appender>-->
 
-    <logger name="com.sandbox_gradle" level="info" additivity="false">
+    <logger name="com.sandbox_maven" level="info" additivity="false">
         <appender-ref ref="STDOUT"/>
         <!--        <appender-ref ref="FILE"/>-->
     </logger>
