@@ -1,16 +1,12 @@
 package com.sandbox_maven.test01.package2.aspectj_boot;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("documentarist")
 public class NewDocumentarist {
     protected GrammyGuitarist guitarist;
 
-    @Autowired
-    @Qualifier("johnMayer")
-    public void setGuitarist(GrammyGuitarist guitarist) {
+    public NewDocumentarist(GrammyGuitarist guitarist) {
         this.guitarist = guitarist;
     }
 
