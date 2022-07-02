@@ -9,6 +9,7 @@
     </parent>
 
     <modules>
+        <module>Jdbc</module>
         <module>Hibernate</module>
         <module>Jpa</module>
     </modules>
