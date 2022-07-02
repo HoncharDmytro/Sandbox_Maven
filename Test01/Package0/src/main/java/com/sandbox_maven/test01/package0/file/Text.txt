@@ -1,0 +1,4 @@
+Support for try-with-resources — introduced in Java 7 — allows us to declare resources to be used
+in a try block with the assurance that the resources will be closed after the execution of that block.
+
+The resources declared need to implement the AutoCloseable interface.
