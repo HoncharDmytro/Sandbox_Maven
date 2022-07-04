@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "singer")
+//@Table(name = "singer")
 @NamedQueries({
         @NamedQuery(name=Singer.FIND_ALL, query="select s from Singer s"),
         @NamedQuery(name=Singer.FIND_SINGER_BY_ID,
@@ -33,21 +33,21 @@ public class Singer implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    //@Column(name = "ID")
     private Long id;
 
     @Version
-    @Column(name = "VERSION")
+    //@Column(name = "VERSION")
     private int version;
 
-    @Column(name = "FIRST_NAME")
+    //@Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name = "LAST_NAME")
+    //@Column(name = "LAST_NAME")
     private String lastName;
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "BIRTH_DATE")
+    //@Column(name = "BIRTH_DATE")
     private Date birthDate;
 
     @OneToMany(mappedBy = "singer", cascade=CascadeType.ALL, orphanRemoval=true)
@@ -55,8 +55,8 @@ public class Singer implements Serializable {
 
     @ManyToMany
     @JoinTable(name = "singer_instrument",
-            joinColumns = @JoinColumn(name = "SINGER_ID"),
-            inverseJoinColumns = @JoinColumn(name = "INSTRUMENT_ID"))
+            joinColumns = @JoinColumn(name = "singer_id"),
+            inverseJoinColumns = @JoinColumn(name = "instrument_id"))
     private Set<Instrument> instruments = new HashSet<>();
 
     public Long getId() {
@@ -98,7 +98,6 @@ public class Singer implements Serializable {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
-
 
     public Set<Album> getAlbums() {
         return this.albums;

@@ -7,27 +7,26 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
-@Table(name = "album")
+//@Table(name = "album")
 public class Album implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    //@Column(name = "ID")
     private Long id;
 
     @Version
-    @Column(name = "VERSION")
+    //@Column(name = "VERSION")
     private int version;
 
     @Column
     private String title;
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "RELEASE_DATE")
-
+    @Column(name = "release_date")
     private Date releaseDate;
 
     @ManyToOne
-    @JoinColumn(name = "SINGER_ID")
+    @JoinColumn(name = "singer_id")
     private Singer singer;
 
     public Album() {

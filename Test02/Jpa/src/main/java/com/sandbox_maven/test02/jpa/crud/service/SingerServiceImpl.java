@@ -20,11 +20,14 @@ public class SingerServiceImpl implements SingerService {
     final static String ALL_SINGER_NATIVE_QUERY =
             "select id, first_name, last_name, birth_date, version from singer";
 
-    private static Logger logger = LoggerFactory.getLogger(SingerServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(SingerServiceImpl.class);
 
-
-    @PersistenceContext
     private EntityManager em;
+
+    @PersistenceContext // not work with constructor
+    public void setEntityManager(EntityManager em) {
+        this.em = em;
+    }
 
     @Transactional(readOnly=true)
     @Override
@@ -34,9 +37,8 @@ public class SingerServiceImpl implements SingerService {
 
     @Transactional(readOnly=true)
     @Override
-    public List<Singer> findAllWithAlbum() {
-        List<Singer> singers = em.createNamedQuery(Singer.FIND_ALL_WITH_ALBUM, Singer.class).getResultList();
-        return singers;
+    public List<Singer> findAllWithAlbum() { //findAll + left join fetch
+        return em.createNamedQuery(Singer.FIND_ALL_WITH_ALBUM, Singer.class).getResultList();
     }
 
     @Transactional(readOnly=true)

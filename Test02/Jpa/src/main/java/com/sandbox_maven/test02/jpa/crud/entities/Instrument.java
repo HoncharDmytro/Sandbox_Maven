@@ -7,16 +7,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "instrument")
+//@Table(name = "instrument")
 public class Instrument implements Serializable {
     @Id
-    @Column(name = "INSTRUMENT_ID")
+    //@Column(name = "INSTRUMENT_ID")
     private String instrumentId;
 
     @ManyToMany
     @JoinTable(name = "singer_instrument",
-            joinColumns = @JoinColumn(name = "INSTRUMENT_ID"),
-            inverseJoinColumns = @JoinColumn(name = "SINGER_ID"))
+            joinColumns = @JoinColumn(name = "instrument_id"),
+            inverseJoinColumns = @JoinColumn(name = "singer_id"))
     private Set<Singer> singers = new HashSet<>();
 
     public String getInstrumentId() {

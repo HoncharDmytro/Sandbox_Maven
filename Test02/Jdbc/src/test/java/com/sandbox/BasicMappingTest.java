@@ -1,51 +1,51 @@
 package com.sandbox;
 
+import com.sandbox.config.AppConfig;
 import com.sandbox.entities.Person;
 import com.sandbox.repositorys.PersonRepository;
 import org.junit.jupiter.api.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // to run tests in order
-public class BasicMappingTest { // extends BaseTest
+public class BasicMappingTest {
 
-    //private JdbcTemplate jdbcTemplate;
-    private final PersonRepository personRepository;
+    private static GenericApplicationContext ctx;
+    //private static PersonService personService; //!!!!!!!!!!!!!!!!!!!!!!!
+    private static PersonRepository personRepository;//!!!!!!!!!!!!!!!!!!!!!!!
 
-    //@Autowired
-    public BasicMappingTest(PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    @BeforeAll
+    private static void beforeAll() {
+        //private JdbcTemplate jdbcTemplate;
+        ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+        personRepository = ctx.getBean(PersonRepository.class);
     }
 
     @Test
     @DisplayName("Create-Person-Test ")
     @Order(1)
     void createPersonTest() {
-
         Person created = personRepository.save(createPerson());
-
-        assertTrue(created != null && created.getId() != null);
+        assertNotNull(created);
     }
 
     @Test
     @DisplayName("Update-Person-Test ")
     @Order(2)
     void updatePersonTest() {
-
-        // Read all users
         List<Person> allUsers = (List<Person>) personRepository.findAll();
 
         allUsers.forEach(person -> {
-            person.setLastName("Jiligan");
+            person.setLastName("Jillian");
             Person updated = personRepository.save(person);
 
-            assertTrue(updated.getLastName().equals("Jiligan"));
+            assertEquals(updated.getLastName(), "Jillian");
         });
 
         //personRepository.saveAll(allUsers); // batch update
@@ -55,8 +55,6 @@ public class BasicMappingTest { // extends BaseTest
     @DisplayName("Delete-Person-Test ")
     @Order(3)
     void deleteUserTest() {
-
-        // Read all users
         List<Person> allPersons = (List<Person>) personRepository.findAll();
 
         allPersons.forEach(person -> {
@@ -71,7 +69,12 @@ public class BasicMappingTest { // extends BaseTest
     public Person createPerson() {
         Person p = new Person();
         p.setFirstName("Bob");
-        p.setLastName("Leffen");
+        p.setLastName("Geffen");
         return p;
+    }
+
+    @AfterAll
+    private static void afterAll() {
+        ctx.close();
     }
 }

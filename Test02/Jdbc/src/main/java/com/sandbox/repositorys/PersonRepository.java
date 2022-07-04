@@ -10,11 +10,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+@Repository("personRepository")
 public interface PersonRepository extends CrudRepository<Person, Long> {//extends, not implements!!!
     //can extend interfaces Repository, CrudRepository, or PagingAndSortingRepository
 
+    List<Person> findAll();
     List<Person> findByFirstName(String firstName);
+    List<Person> findByFirstNameAndLastName(String firstName, String lastName);
 
 //  List<Student> findByLastName(String lastName);
 
