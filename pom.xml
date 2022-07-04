@@ -12,7 +12,6 @@
     <modules>
         <module>Test01</module>
         <module>Test02</module>
-        <module>Jdbc</module>
     </modules>
 
     <properties>
@@ -30,7 +29,7 @@
         <!--spring libs-->
         <spring.version>5.3.21</spring.version>
         <springBoot.version>2.7.1</springBoot.version>
-        <springData.version>2.7.1</springData.version>
+<!--        <springData.version>2.7.1</springData.version>   something strange with versions??!!!-->
         <springAmqp.version>2.4.6</springAmqp.version>
         <springSecurity.version>5.7.2</springSecurity.version>
         <springBatch.version>4.3.6</springBatch.version>
@@ -126,8 +125,29 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-commons</artifactId>
+                <version>2.7.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-jpa</artifactId>
-                <version>${springData.version}</version>
+                <version>2.7.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-jdbc</artifactId>
+                <version>2.4.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>3.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-rest-webmvc</artifactId>
+                <version>3.7.1</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -236,8 +256,18 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jdbc</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-rest</artifactId>
+                <version>${springBootversion}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -288,11 +318,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jetty</artifactId>
                 <version>${springBoot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-rest</artifactId>
-                <version>${springBootversion}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
