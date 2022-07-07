@@ -12,6 +12,7 @@
     <modules>
         <module>Test01</module>
         <module>Test02</module>
+        <module>Test03</module>
     </modules>
 
     <properties>
