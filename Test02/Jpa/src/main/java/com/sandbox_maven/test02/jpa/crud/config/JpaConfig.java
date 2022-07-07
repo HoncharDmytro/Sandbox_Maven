@@ -23,7 +23,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:properties/app.properties")
-@ComponentScan(basePackages = {"com.sandbox_maven.test02.jpa.crud.service"})
+@ComponentScan(basePackages = {"com.sandbox_maven.test02.jpa.crud.services"})
 public class JpaConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(JpaConfig.class);

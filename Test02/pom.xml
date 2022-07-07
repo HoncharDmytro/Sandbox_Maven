@@ -12,6 +12,7 @@
         <module>Jdbc</module>
         <module>Hibernate</module>
         <module>Jpa</module>
+        <module>Transactions</module>
     </modules>
 
     <modelVersion>4.0.0</modelVersion>
@@ -30,7 +31,6 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-dbcp</artifactId>
-            <version>${tomcat.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

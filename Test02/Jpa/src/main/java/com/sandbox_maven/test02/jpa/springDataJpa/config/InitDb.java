@@ -2,7 +2,7 @@ package com.sandbox_maven.test02.jpa.springDataJpa.config;
 
 import com.sandbox_maven.test02.jpa.crud.entities.Album;
 import com.sandbox_maven.test02.jpa.crud.entities.Singer;
-import com.sandbox_maven.test02.jpa.springDataJpa.repository.SingerRepository;
+import com.sandbox_maven.test02.jpa.springDataJpa.repositories.SingerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

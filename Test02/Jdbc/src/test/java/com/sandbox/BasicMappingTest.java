@@ -2,7 +2,7 @@ package com.sandbox;
 
 import com.sandbox.config.AppConfig;
 import com.sandbox.entities.Person;
-import com.sandbox.repositorys.PersonRepository;
+import com.sandbox.repositories.PersonRepository;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

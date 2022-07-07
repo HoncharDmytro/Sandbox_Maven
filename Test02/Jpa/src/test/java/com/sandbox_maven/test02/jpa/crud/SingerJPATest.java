@@ -3,7 +3,7 @@ package com.sandbox_maven.test02.jpa.crud;
 import com.sandbox_maven.test02.jpa.crud.config.JpaConfig;
 import com.sandbox_maven.test02.jpa.crud.entities.Album;
 import com.sandbox_maven.test02.jpa.crud.entities.Singer;
-import com.sandbox_maven.test02.jpa.crud.service.SingerService;
+import com.sandbox_maven.test02.jpa.crud.services.SingerService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;

@@ -2,8 +2,8 @@ package com.sandbox_maven.test02.jpa.crud;
 
 import com.sandbox_maven.test02.jpa.crud.config.JpaConfig;
 import com.sandbox_maven.test02.jpa.crud.modelView.SingerSummary;
-import com.sandbox_maven.test02.jpa.crud.service.SingerSummaryService;
-import com.sandbox_maven.test02.jpa.crud.service.SingerSummaryUntypeImpl;
+import com.sandbox_maven.test02.jpa.crud.services.SingerSummaryService;
+import com.sandbox_maven.test02.jpa.crud.services.SingerSummaryUntypeImpl;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
 package com.sandbox_maven.package3.aop;
 
-import com.sandbox_maven.package3.entity.Book;
+import com.sandbox_maven.package3.entities.Book;
 import com.sandbox_maven.package3.util.CustomResponse;
 import com.sandbox_maven.package3.util.CustomStatus;
 import lombok.extern.slf4j.Slf4j;

@@ -1,7 +1,7 @@
 package com.sandbox_maven.package3;
 
-import com.sandbox_maven.package3.entity.Book;
-import com.sandbox_maven.package3.repository.BookRepository;
+import com.sandbox_maven.package3.entities.Book;
+import com.sandbox_maven.package3.repositories.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
