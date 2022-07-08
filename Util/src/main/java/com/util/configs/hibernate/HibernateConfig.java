@@ -28,7 +28,7 @@ public abstract class HibernateConfig extends BaseConfig {
         return new HibernateTransactionManager(sessionFactory());
     }
 
-    @Bean
+    @Bean(initMethod = "init", destroyMethod = "destroy")
     public SessionFactory sessionFactory() {
         return new LocalSessionFactoryBuilder(dataSource())
                 .scanPackages(entities)

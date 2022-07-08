@@ -18,7 +18,7 @@ public class Destruction {
     }
 
     //@PreDestroy
-    public final void clearDB() {
+    public final void destroy() {
         logger.info(" ... Deleting database files.");
 
         String sqlQuery = "TRUNCATE hibernate.singer;" +

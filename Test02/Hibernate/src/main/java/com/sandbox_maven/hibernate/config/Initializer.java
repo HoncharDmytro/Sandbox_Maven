@@ -33,7 +33,7 @@ public class Initializer {
     }
 
     //@PostConstruct
-    public final void initDB() {
+    public final void init() {
         logger.info("Starting database initialization...");
 
         Instrument guitar = new Instrument();

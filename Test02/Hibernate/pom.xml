@@ -11,5 +11,14 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>Hibernate</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.util</groupId>
+            <artifactId>Util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
 
 </project>
