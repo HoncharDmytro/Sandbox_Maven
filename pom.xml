@@ -13,6 +13,8 @@
         <module>Test01</module>
         <module>Test02</module>
         <module>Test03</module>
+        <module>Test04</module>
+        <module>Spring_Projects</module>
     </modules>
 
     <properties>
