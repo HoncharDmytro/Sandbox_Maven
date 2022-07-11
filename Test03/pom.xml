@@ -17,7 +17,5 @@
         <module>Task_Scheduling</module>
         <module>Spring_Remoting</module>
         <module>Testing</module>
-        <module>Scripting</module>
-        <module>Monitoring</module>
     </modules>
 </project>

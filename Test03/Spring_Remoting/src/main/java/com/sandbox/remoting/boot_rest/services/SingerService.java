@@ -15,4 +15,6 @@ public interface SingerService {
     Singer save(Singer singer);
 
     void delete(Singer singer);
+
+    Singer findByFirstNameAndLastName(String john, String mayer);
 }
