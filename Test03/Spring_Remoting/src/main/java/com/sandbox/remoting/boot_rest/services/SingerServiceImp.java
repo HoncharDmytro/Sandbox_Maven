@@ -47,4 +47,9 @@ public class SingerServiceImp implements SingerService {
     public void delete(Singer singer) {
         singerRepository.delete(singer);
     }
+
+    @Override
+    public Singer findByFirstNameAndLastName(String john, String mayer) {
+        return null;
+    }
 }
