@@ -17,6 +17,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
  * Created by Dmytro Honchar
  * Date: 7/12/2022
  */
+
 @Entity
 @Table(name = "singer")
 @Data

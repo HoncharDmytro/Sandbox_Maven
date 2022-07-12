@@ -40,8 +40,8 @@ public class SingerServiceImp implements SingerService{
     }
 
     @Override
-    public Singer save(Singer singer) {
-        return singerRepository.save(singer);
+    public void save(Singer singer) {
+        singerRepository.save(singer);
     }
 
     @Override
