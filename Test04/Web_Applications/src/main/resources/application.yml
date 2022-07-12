@@ -1,0 +1,62 @@
+logging:
+  level: info
+    org.springframework: info
+    root: info
+    sql: info
+    web: info
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          batch-size: 20
+          fetch-size: 50
+        max-fetch-depth: 3
+        format-sql: true
+        use-sql-comments: true
+  #        cache:
+  #          use-query-cache: false
+  #          use-second-level-cache: false
+  #          use-structured-entries: false
+  #          use-minimal-puts: false
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hibernateDB?useSSL=true
+    username: root
+    password: 1111
+
+    dbcp2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/hibernateDB?useSSL=true
+      username: root
+      password: 1111
+    #      default-transaction-isolation: 3
+
+    tomcat:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/hibernateDB?useSSL=true
+      username: root
+      password: 1111
+  #      default-transaction-isolation: 3
+
+  sql:
+    init:
+      #      schema-locations: classpath:classpath:sql/schema.sql
+      encoding: UTF-8
