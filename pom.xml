@@ -46,7 +46,7 @@
         <atomikos.version>5.0.9</atomikos.version>
         <hibernateEhcache.version>6.0.0.Alpha7</hibernateEhcache.version>
         <mysql.version>8.0.29</mysql.version>
-        <postgres.version>42.4.1</postgres.version>
+        <postgres.version>42.4.3</postgres.version>
         <atomikos.version>5.0.9</atomikos.version>
 
         <!--logging libs-->
